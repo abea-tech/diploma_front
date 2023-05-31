@@ -40,9 +40,9 @@ function LoginModal({ isOpen, onClose, onClick }) {
   const [isLogged, setIsLogged] = useState(false);
 
   const handleLogin = () => {
-    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    const username = "pompa";
+    // const username = "pompa";
     const requestBody = {
       // email,
       username,
@@ -74,17 +74,18 @@ function LoginModal({ isOpen, onClose, onClick }) {
         <ModalCloseButton />
         <ModalBody>
           <form onSubmit={handleSubmit(handleLogin)}>
-            <FormControl id="email" isInvalid={errors.email} mb={3}>
-              <FormLabel>Почта</FormLabel>
+            <FormControl id="username" isInvalid={errors.email} mb={3}>
+              <FormLabel>Логин</FormLabel>
               <Input
-                type="email"
+                type="text"
                 focusBorderColor="#FED057"
-                {...register("email", {
-                  required: true,
-                  pattern: /^\S+@\S+$/i,
-                })}
+
+                // {...register("email", {
+                //   required: true,
+                //   pattern: /^\S+@\S+$/i,
+                // })}
               />
-              <FormErrorMessage>Почта обязательна</FormErrorMessage>
+              <FormErrorMessage>Логин обязательна</FormErrorMessage>
             </FormControl>
             <FormControl id="password" isInvalid={errors.password} mb={3}>
               <FormLabel>Пароль</FormLabel>
@@ -110,7 +111,7 @@ function LoginModal({ isOpen, onClose, onClick }) {
             </Flex>
           </form>
         </ModalBody>
-        <ModalFooter>
+        {/* <ModalFooter>
           <Flex justifyContent="center" w="100%">
             <Button
               colorScheme="blue"
@@ -121,7 +122,7 @@ function LoginModal({ isOpen, onClose, onClick }) {
               Зарегистрироваться
             </Button>
           </Flex>
-        </ModalFooter>
+        </ModalFooter> */}
       </ModalContent>
     </Modal>
   );

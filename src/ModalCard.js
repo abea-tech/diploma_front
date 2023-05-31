@@ -198,7 +198,7 @@ function ModalCard({ onClick, getDelivery, updateMarkers }) {
 
   const loginModalClosed = () => {
     onCloseLoginModal();
-    onOpenRegisterModal();
+    // onOpenRegisterModal();
   };
 
   const listDeliveriesModalClosed = (deliveryGroup) => {

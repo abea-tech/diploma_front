@@ -104,7 +104,7 @@ function ListDeliveriesDetailModal({
     <Modal isOpen={isOpen} onClose={onClose} scrollBehavior={"inside"}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>№ 231531</ModalHeader>
+        <ModalHeader>№ {deliveryGroup.order_id}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           {deliveryGroup && deliveryGroup.deliveries ? (
@@ -151,7 +151,7 @@ function ListDeliveriesDetailModal({
               </Box>
             ))
           ) : (
-            <p>No deliveries found.</p>
+            <p>Никаких доставок нет.</p>
           )}
         </ModalBody>
         <ModalFooter>
